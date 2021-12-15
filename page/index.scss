@@ -2,5 +2,6 @@
 @import '../vendor/fonts/fonts.scss';
 @import '../sccs/variables/variables-light.scss';
 @import '../sccs/mixins.scss';
-@import url(../blocks/page/page.css);
-@import url(../blocks/header/header.css);
+@import '../sccs/blocks/page/page.scss';
+@import '../sccs/blocks/header/header.scss';
+@import '../sccs/blocks/nav/nav.scss';
