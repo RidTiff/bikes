@@ -1,0 +1,6 @@
+.header {
+    @include obnull;
+    @include size(100%, 74px, 0);
+    box-sizing: border-box;
+    padding-right: 120px;
+}

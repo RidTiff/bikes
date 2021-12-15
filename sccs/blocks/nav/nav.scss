@@ -1,0 +1,31 @@
+.nav {
+    @include obnull;
+    @include size(100%, 100%, 0);
+    display: block;
+
+    &__ul {
+        @include obnull;
+        @include size(100%, 100%, 0);
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    &__li {
+        margin-right: 34px;
+
+        &:last-child {
+            margin: 0;
+        }
+    }
+
+    &__item {
+        @include obnull;
+        @include fonts(14px, 500, 18px, 0);
+        text-decoration: none;
+        color: $color-heading;
+        cursor: pointer;
+    }
+}

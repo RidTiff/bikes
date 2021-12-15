@@ -4,7 +4,9 @@
     font-size: $s;
     font-weight: $w;
     line-height: $lh;
-    letter-spacing: $ls;
+    @if $ls != 0 {
+        letter-spacing: $ls;
+    }
 }
 
 @mixin size($w, $h, $br) {
@@ -13,4 +15,10 @@
     @if $br > 0 {
         border-radius: $br;  
     } 
+}
+
+@mixin  obnull {
+    margin: 0;
+    padding: 0;
+    font-size: 0;
 }
