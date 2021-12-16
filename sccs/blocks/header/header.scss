@@ -1,6 +1,12 @@
 .header {
     @include obnull;
+    max-width: 1440px;
     @include size(100%, 74px, 0);
     box-sizing: border-box;
     padding-right: 120px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    background-color: #f4f4f4;
 }
