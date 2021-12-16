@@ -1,4 +1,4 @@
-@mixin fonts($s, $w, $lh, $ls) {
+@mixin fonts($s, $w, $lh, $ls, $color) {
     font-family: 'Inter', Arial, sans-serif;
     font-style: normal;
     font-size: $s;
@@ -7,12 +7,17 @@
     @if $ls != 0 {
         letter-spacing: $ls;
     }
+    color: $color;
 }
 
 @mixin size($w, $h, $br) {
-    width: $w;
-    height: $h;
-    @if $br > 0 {
+    @if $w != 0 {
+        width: $w;
+    } 
+    @if $h != 0 {
+        height: $h;
+    } 
+    @if $br != 0 {
         border-radius: $br;  
     } 
 }

@@ -23,9 +23,8 @@
 
     &__item {
         @include obnull;
-        @include fonts(14px, 500, 18px, 0);
+        @include fonts(14px, 500, 18px, 0, $color-heading);
         text-decoration: none;
-        color: $color-heading;
         cursor: pointer;
     }
 }
