@@ -1,0 +1,102 @@
+.capital-block {
+    @include size(100%, 0, 0);
+    background-image: url('../images/capital-blockBG.png');
+    background-size: 610px 836px;
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    max-width: 1440px;
+    min-height: 856px;
+    margin-top: 74px;
+    align-self: flex-end;
+
+    &__content {
+        width: 460px;
+        margin-left: 120px;
+    }
+
+    &__title {
+        @include obnull;
+        margin: 80px 0 50px;
+        @include fonts(55px, 700, 60px, -0.5px, $color-heading);
+    }
+
+    &__text {
+        @include obnull;
+        margin: 0 0 50px;
+        @include fonts(18px, 400, 28px, 0, $color-text);
+    }
+
+    &__button {
+        @include obnull;
+        border: 0;
+        @include size(180px, 50px, 4px);
+        background-image: linear-gradient(to left, #24b47e 0 180px, #319E75 180px 180px);
+        @include fonts(14px, 600, 18px, 1px, #fff);
+        cursor: pointer;
+
+        &:hover {
+            animation: changeColor linear .5s forwards;
+        }
+        @keyframes changeColor {
+            0% {
+                background-image: linear-gradient(to left, #24b47e 0 180px, #319E75 180px 180px);
+            }
+
+            25% {
+                background-image: linear-gradient(to left, #24b47e 0 120px, #319E75 120px 180px);
+            }
+
+            50% {
+                background-image: linear-gradient(to left, #24b47e 0 90px, #319E75 90px 180px);
+            }
+
+            75% {
+                background-image: linear-gradient(to left, #24b47e 0 60px, #319E75 60px 180px);
+            }
+            100% {
+                background-image: linear-gradient(to left, #24b47e 0 0, #319E75 0 180px);
+            }
+        }
+    }
+
+    &__sign {
+        margin: 167px 0 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center
+    }
+
+    &__sign-text {
+        @include obnull;
+        @include fonts(18px, 400, 18px, 0, $color-heading);
+        margin-right: 30px;
+    }
+
+    &__sign-line {
+        background-color: #D7D4D4;
+        @include size(132px, 2px, 0);
+    }
+
+    &__card-container {
+        @include size(440px, 430px, 0);
+        position: absolute;
+        top: 347px;
+        right: 370px;
+    }
+
+    &__card {
+        position: sticky;
+        top: inherit;
+        @include size(440px, 300px, 20px);
+        box-shadow: -20px 60px 220px rgba(0, 0, 0, 0.44);
+        background-color: $bg-base;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__bike {
+        @include obnull;
+        @include size(340px, 260px, 0);
+    }
+}
