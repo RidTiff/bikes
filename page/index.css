@@ -100,9 +100,8 @@
   font-size: 0;
   width: 100%;
   max-width: 1440px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  box-sizing: border-box;
+  padding-left: 120px;
 }
 
 .capital-block {
@@ -113,12 +112,11 @@
   background-repeat: no-repeat;
   max-width: 1440px;
   min-height: 856px;
-  margin-top: 74px;
+  margin: 74px 0 60px;
   align-self: flex-end;
 }
 .capital-block__content {
   width: 460px;
-  margin-left: 120px;
 }
 .capital-block__title {
   margin: 0;
@@ -321,4 +319,108 @@
   font-weight: 400;
   line-height: 28px;
   color: rgba(34, 34, 34, 0.7);
+}
+
+.pavement {
+  width: 100%;
+  max-width: 1440px;
+  overflow: hidden;
+  padding: 60px 0;
+  box-sizing: border-box;
+}
+.pavement__description {
+  width: 460px;
+  margin-bottom: 80px;
+}
+.pavement__heading {
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+  font-family: "Inter", Arial, sans-serif;
+  font-style: normal;
+  font-size: 55px;
+  font-weight: 700;
+  line-height: 60px;
+  letter-spacing: -0.5px;
+  color: #151515;
+  margin-bottom: 50px;
+}
+.pavement__text {
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+  font-family: "Inter", Arial, sans-serif;
+  font-style: normal;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+  color: rgba(34, 34, 34, 0.7);
+}
+.pavement__slider {
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+.pavement__image {
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+  width: 650px;
+  height: 400px;
+  margin-right: 40px;
+  border: 0;
+  min-width: 650px;
+}
+.pavement__gradient {
+  width: 100px;
+  height: 40px;
+  border-radius: 4px;
+  background-color: #24b47e;
+  transform: skew(-23deg, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 16px;
+  left: -16px;
+}
+.pavement__gradient-img {
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+  border: 0;
+  width: 50px;
+  height: auto;
+  transform: skew(23deg, 0);
+}
+.pavement__buttons {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+}
+.pavement__switch {
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  border: 0;
+  background-color: #ebebeb;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+.pavement__switch:hover {
+  opacity: 0.6;
+}
+.pavement__switch_back {
+  margin-right: 20px;
+  background-image: url(../images/back.svg);
+}
+.pavement__switch_next {
+  background-image: url(../images/next.svg);
 }/*# sourceMappingURL=index.css.map */
