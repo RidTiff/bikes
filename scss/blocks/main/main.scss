@@ -1,0 +1,7 @@
+.main {
+    @include obnull;
+    width: 100%;
+    max-width: 1440px;
+    box-sizing: border-box;
+    padding-left: 120px;
+}
