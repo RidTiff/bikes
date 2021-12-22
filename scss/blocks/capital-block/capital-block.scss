@@ -16,13 +16,13 @@
     &__title {
         @include obnull;
         margin: 80px 0 50px;
-        @include fonts(55px, 700, 60px, -0.5px, $color-heading);
+        @include fonts(55px, 700, 60px, -0.5px, var(--color-heading));
     }
 
     &__text {
         @include obnull;
         margin: 0 0 50px;
-        @include fonts(18px, 400, 28px, 0, $color-text);
+        @include fonts(18px, 400, 28px, 0, var(--color-text));
     }
 
     &__button {
@@ -30,7 +30,7 @@
         border: 0;
         @include size(180px, 50px, 4px);
         background-image: linear-gradient(to left, #24b47e 0 180px, #319E75 180px 180px);
-        @include fonts(14px, 600, 18px, 1px, #fff);
+        @include fonts(14px, 600, 18px, 1px, var(--color-button));
         cursor: pointer;
 
         &:hover {
@@ -67,7 +67,7 @@
 
     &__sign-text {
         @include obnull;
-        @include fonts(18px, 400, 18px, 0, $color-heading);
+        @include fonts(18px, 400, 18px, 0, var(--color-heading));
         margin-right: 30px;
     }
 
@@ -88,7 +88,7 @@
         top: inherit;
         @include size(440px, 300px, 20px);
         box-shadow: -20px 60px 220px rgba(0, 0, 0, 0.44);
-        background-color: $bg-base;
+        background-color: #f4f4f4;
         display: flex;
         justify-content: center;
         align-items: center;
