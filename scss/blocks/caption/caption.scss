@@ -19,7 +19,7 @@
 
     &__title {
         @include obnull;
-        @include fonts(34px, 600, 44px, -0.5px, $color-heading);
+        @include fonts(34px, 600, 44px, -0.5px, var(--color-heading));
     }
 
     &__author {
@@ -33,12 +33,12 @@
 
     &__author-name {
         @include obnull;
-        @include fonts(20px, 500, 32px, 0, $color-heading);
+        @include fonts(20px, 500, 32px, 0, var(--color-heading));
         margin-bottom: 6px;
     }
 
     &__author-description {
         @include obnull;
-        @include fonts(16px, 400, 28px, 0, $color-text)
+        @include fonts(16px, 400, 28px, 0, var(--color-text))
     }
 }

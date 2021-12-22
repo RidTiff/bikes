@@ -1,6 +1,7 @@
 @import '../vendor/normalize.scss';
 @import '../vendor/fonts/fonts.scss';
-@import '../scss/variables/variables-light.scss';
+@import url(../scss/blocks/page/theme/page_theme_light.css);
+@import url(../scss/blocks/page/theme/page_theme_dark.css);
 @import '../scss/mixins.scss';
 @import '../scss/blocks/page/page.scss';
 @import '../scss/blocks/header/header.scss';

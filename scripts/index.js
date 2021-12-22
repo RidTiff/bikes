@@ -1,3 +1,5 @@
+// Покрытия
+
 const pavement = [
     highway = {
         heading: 'Шоссе',
@@ -86,3 +88,9 @@ nextButton.addEventListener('click', function() {
 backButton.addEventListener('click', function() {
     backPavement();
 });
+
+
+
+
+// Темная тема
+
