@@ -423,4 +423,86 @@
 }
 .pavement__switch_next {
   background-image: url(../images/next.svg);
+}
+
+.bikes {
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+  max-width: 1440px;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 60px auto;
+}
+.bikes__text {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.bikes__title {
+  margin: 0;
+}
+.bikes__pavement {
+  border: 0;
+  background-color: inherit;
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+  margin-right: 40px;
+  font-family: "Inter", Arial, sans-serif;
+  font-style: normal;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+  color: var(--color-text);
+  text-align: right;
+  cursor: pointer;
+}
+.bikes__pavement:last-of-type {
+  margin: 0;
+}
+.bikes__pavement_active {
+  color: var(--color-heading);
+  font-weight: 600;
+}
+.bikes__cards {
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+  margin-top: 120px;
+  display: flex;
+  flex-direction: row;
+}
+.bikes__card {
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+  margin-right: 30px;
+  display: block;
+  text-decoration: none;
+}
+.bikes__card-bg {
+  width: 380px;
+  height: 380px;
+  border-radius: 20px;
+  background-color: #f4f4f4;
+  box-shadow: 0px 20px 140px rgba(0, 0, 0, 0.06);
+  cursor: pointer;
+}
+.bikes__card-bg:hover {
+  box-shadow: -20px 60px 220px rgba(0, 0, 0, 0.44);
+}
+.bikes__image {
+  width: 340px;
+  height: 340px;
+  margin: 20px;
+}
+.bikes__description {
+  font-family: "Inter", Arial, sans-serif;
+  font-style: normal;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 22px;
+  color: var(--color-heading);
 }/*# sourceMappingURL=index.css.map */
