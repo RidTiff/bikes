@@ -505,4 +505,46 @@
   font-weight: 600;
   line-height: 22px;
   color: var(--color-heading);
+}
+
+.training {
+  display: grid;
+  grid-template-columns: 460px 580px;
+  grid-template-rows: auto auto;
+  gap: 160px;
+  margin: 150px 0 120px;
+}
+.training__text {
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+.training__title {
+  margin-top: 0;
+}
+.training__links {
+  display: flex;
+  flex-direction: row;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+.training__link {
+  margin-right: 30px;
+  font-family: "Inter", Arial, sans-serif;
+  font-style: normal;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 28px;
+  color: var(--color-heading);
+  text-decoration: none;
+}
+.training__link:last-of-type {
+  margin: 0;
+}
+.training__image {
+  width: 580px;
+  height: 460px;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
 }/*# sourceMappingURL=index.css.map */
