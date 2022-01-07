@@ -1,0 +1,76 @@
+.footer {
+    background-color: var(--bg-footer);
+    @include size(100%, 0, 0);
+    box-sizing: border-box;
+    padding: 80px 120px 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__title {
+        @include obnull;
+        @include fonts(24px, 600, 32px, 0, var(--color-heading));
+        margin-bottom: 50px;
+        width: 229px;
+    }
+
+    &__form {
+        @include obnull;
+        position: relative;
+        margin-bottom: 100px;
+    }
+
+    &__e-mail {
+        @include obnull;
+        background-color: inherit;
+        @include size(360px, 50px, 4px);
+        border: 1px solid rgba(199, 199, 199, 0.5);
+        @include fonts(13px, 500, 28px, 0, var(--color-heading));
+        padding: 11px 36px 11px 20px;
+        box-sizing: border-box;
+        cursor: pointer;
+
+        &::placeholder {
+            color: var(--color-placeholder);
+        }
+
+        &:hover::placeholder {
+            color: var(--color-heading);
+        }
+
+        &:focus {
+            outline: none;
+
+            &::placeholder {
+                font-size: 0;
+            }
+        }
+    }
+
+    &__submit {
+        @include obnull;
+        border: 0;
+        position: absolute;
+        bottom: 11px;
+        right: 20px;
+        @include fonts(13px, 500, 28px, 0, var(--color-heading));
+        background-color: var(--bg-footer);
+        cursor: pointer;
+
+        &_hidden {
+            display: none;
+        }
+    }
+
+    &__caption {
+        @include obnull;
+        @include fonts(14px, 400, 20px, 0, var(--color-caption));
+    }
+
+}

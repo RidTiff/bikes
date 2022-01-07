@@ -10,7 +10,9 @@
         --color-text: rgba(34, 34, 34, .7);
         --color-caption: #cfcfcf;
         --color-button: #fff;
+        --color-placeholder: rgba(34, 34, 34, .7);
         --bg-base: #f4f4f4;
+        --bg-footer: #efefef;
     }
 
     &_theme_dark {
@@ -18,6 +20,8 @@
         --color-text: rgba(229, 229, 229, .7);
         --color-caption: #565656;
         --color-button: #fff;
+        --color-placeholder: rgba(#fff, .7);
         --bg-base: #333;
+        --bf-base: #2f2f2f;
     }
 }

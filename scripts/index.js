@@ -193,3 +193,25 @@ bikeGravelLinkElement.addEventListener('click', function() {
 bikeTtLinkElement.addEventListener('click', function() {
     changeBikesImage(bikeTtLinkElement);
 });
+
+//e-mail 
+
+const emailForm = document.querySelector('.footer__form');
+const emailInput = emailForm.querySelector('.footer__e-mail');
+const emailSubmit = emailForm.querySelector('.footer__submit');
+
+emailInput.onfocus = function() {
+    emailSubmit.classList.remove('footer__submit_hidden');
+}
+
+emailInput.onblur = function() {
+    if (emailInput.value === '') {
+    emailSubmit.classList.add('footer__submit_hidden');
+    }
+}
+
+emailSubmit.addEventListener('submit', function() {
+    emailInput.placeholder = 'Круто!';
+    emailInput.value = '';
+    emailSubmit.classList.add('footer__submit_hidden');
+})
