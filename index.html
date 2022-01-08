@@ -17,7 +17,7 @@
           <a href="#bikes" class="nav__item">Велосипеды</a>
         </li>
         <li class="nav__li">
-          <a href="#" class="nav__item">Тренировки</a>
+          <a href="#training" class="nav__item">Тренировки</a>
         </li>
       </ul>
     </nav>
@@ -100,7 +100,38 @@
         </a>
       </div>
     </section>
+    <section class="training" id="training">
+      <div class="training__text">
+        <h2 class="training__title heading">Тренировки</h2>
+        <p class="training__description text">Чтобы найти маршрут для 
+          тренировки можно воспользоваться сервисом Komoot, а записать 
+          эти тренировки поможет приложение Strava, а также это приложение 
+          позволит построить тренировочный план.</p>
+      </div>
+      <div class="training__links">
+        <a href="https://www.strava.com" class="training__link">Strava</a>
+        <a href="https://www.komoot.com" class="training__link">Komoot</a>
+      </div>
+      <img src="./images/training.png" alt="Дорога поворачивает меж сосен" class="training__image">
+    </section>
   </main>
+  <footer class="footer">
+    <div class="footer__content">
+      <div class="footer__text">
+        <form class="footer__form" onsubmit="return false;">
+          <h2 class="footer__title">Подпишитесь на рассылку —</h2>
+          <input type="email" class="footer__e-mail" placeholder="Ваш e-mail">
+          <button class="footer__submit footer__submit_hidden">ok!</button>
+        </form>
+        <p class="footer__caption">&copy; Road Club 2021</p>
+      </div>
+      <form class="switch">
+        <label class="switch__label">
+          <input type="checkbox" class="switch__input">
+        </label>
+      </form>
+    </div>
+  </footer>
   <script src="./scripts/index.js"></script>
 </body>
 </html>

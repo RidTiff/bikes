@@ -1,0 +1,41 @@
+.training {
+    display: grid;
+    grid-template-columns: 460px 580px;
+    grid-template-rows: auto auto;
+    gap: 160px;
+    margin: 150px 0 120px;
+
+    &__text {
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    &__title {
+        margin-top: 0;
+    }
+
+    &__links {
+        display: flex;
+        flex-direction: row;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+    &__link {
+        margin-right: 30px;
+        @include fonts(18px, 600, 28px, 0, var(--color-heading));
+        text-decoration: none;
+
+        &:last-of-type {
+            margin: 0;
+        }
+    }
+
+    &__image {
+        @include size(580px, 460px, 0);
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+}
