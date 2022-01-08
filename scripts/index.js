@@ -229,7 +229,7 @@ emailInput.onblur = function() {
     }
 }
 
-emailSubmit.addEventListener('submit', function() {
+emailForm.addEventListener('submit', function() {
     emailInput.placeholder = 'Круто!';
     emailInput.value = '';
     emailSubmit.classList.add('footer__submit_hidden');
