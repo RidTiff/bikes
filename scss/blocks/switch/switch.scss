@@ -1,0 +1,33 @@
+.switch {
+    @include obnull;
+    align-self: flex-end;
+
+    &__input {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+    }
+
+    &__checkbox {
+        @include obnull;
+        @include size(100%, 100%, 0);
+        display: block;
+        background-image: url(../images/switch-light.png);
+    }
+
+    &__input:checked + .switch__checkbox {
+    background-image: url(../images/switch-dark.png);
+    }
+
+    &__input:disabled + .switch__checkbox {
+        background-image: url(../images/switch-light.png);
+    }
+
+    &__label {
+        display: block;
+        @include size(140px, 40px, 0);
+        cursor: pointer;
+    }
+}

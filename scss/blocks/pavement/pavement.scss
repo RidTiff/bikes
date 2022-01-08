@@ -54,7 +54,7 @@
         @include obnull;
         @include size(50px, 50px, 50px);
         border: 0;
-        background-color: #ebebeb;
+        background-color: var(--bg-slider);
         background-position: center;
         background-repeat: no-repeat;
         cursor: pointer;
@@ -66,10 +66,10 @@
 
     &__switch_back {
         margin-right: 20px;
-        background-image: url(../images/back.svg);
+        background-image: var(--bgi-slider-back);
     }
 
     &__switch_next {
-        background-image: url(../images/next.svg);
+        background-image: var(--bgi-slider-next);
     }
 }
