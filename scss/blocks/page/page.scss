@@ -13,6 +13,9 @@
         --color-placeholder: rgba(34, 34, 34, .7);
         --bg-base: #f4f4f4;
         --bg-footer: #efefef;
+        --bg-slider: #ebebeb;
+        --bgi-slider-next: url(../images/next-light.svg);
+        --bgi-slider-back: url(../images/back-light.svg);
     }
 
     &_theme_dark {
@@ -22,6 +25,9 @@
         --color-button: #fff;
         --color-placeholder: rgba(#fff, .7);
         --bg-base: #333;
-        --bf-base: #2f2f2f;
+        --bg-footer: #2f2f2f;
+        --bg-slider: #434343;
+        --bgi-slider-next: url(../images/next-dark.svg);
+        --bgi-slider-back: url(../images/back-dark.svg);
     }
 }

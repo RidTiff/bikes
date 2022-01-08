@@ -93,6 +93,25 @@ backButton.addEventListener('click', function() {
 
 // Темная тема
 
+const switchForm = document.querySelector('.switch');
+const switchInput = switchForm.querySelector('.switch__input');
+const switchLabel = switchForm.querySelector('.switch__label');
+const switchCheckbox = switchForm.querySelector('.switch__checkbox')
+const page = document.querySelector('.page');
+
+switchInput.checked = false;
+
+switchCheckbox.addEventListener('click', function() {
+    if (switchInput.checked === true) {
+    page.classList.add('page_theme_light');
+    page.classList.remove('page_theme_dark');
+    } else {
+        page.classList.remove('page_theme_light');
+        page.classList.add('page_theme_dark');
+    }
+})
+
+
 
 // Велосипеды
 
