@@ -1,0 +1,71 @@
+.bikes {
+    @include obnull;
+    max-width: 1440px;
+    @include size(100%, 0, 0);
+    box-sizing: border-box;
+    margin: 60px auto;
+
+    &__text {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
+    &__title {
+        margin: 0;
+    }
+
+    &__pavement {
+        border: 0;
+        background-color: inherit;
+        @include obnull;
+        margin-right: 40px;
+        @include fonts(18px, 400, 28px, 0, var(--color-text));
+        text-align: right;
+        cursor: pointer;
+
+        &:last-of-type {
+            margin: 0;
+        }
+
+        &_active {
+            color: var(--color-heading);
+            font-weight: 600;
+        }
+    }
+
+    &__cards {
+        @include obnull;
+        margin-top: 120px;
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__card {
+        @include obnull;
+        margin-right: 30px;
+        display: block;
+        text-decoration: none;
+
+        &-bg {
+            @include size(380px, 380px, 20px);
+            background-color: #f4f4f4;
+            box-shadow: 0px 20px 140px rgba(0, 0, 0, 6%);
+            cursor: pointer;
+
+            &:hover {
+                box-shadow: -20px 60px 220px rgba(0, 0, 0, 0.44);
+            }
+        }
+    }
+
+    &__image {
+        @include size(340px, 340px, 0);
+        margin: 20px;
+    }
+
+    &__description {
+        @include fonts(18px, 600, 22px, 0, var(--color-heading))
+    }
+}

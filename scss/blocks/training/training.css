@@ -1,0 +1,6 @@
+.training {
+  display: grid;
+  grid-template-columns: 460px 580px;
+  grid-template-rows: auto;
+  gap: 160px;
+}/*# sourceMappingURL=training.css.map */

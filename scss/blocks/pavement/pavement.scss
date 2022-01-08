@@ -1,0 +1,75 @@
+.pavement {
+    @include size(100%, 0, 0);
+    max-width: 1440px;
+    overflow: hidden;
+    padding: 60px 0;
+    box-sizing: border-box;
+
+    &__description {
+        @include size(460px, 0, 0);
+        margin-bottom: 80px;
+    }
+
+    &__slider {
+        @include obnull;
+        display: flex;
+        flex-direction: row;
+        position: relative;
+    }
+
+    &__image {
+        @include obnull;
+        @include size(650px, 400px, 0);
+        margin-right: 40px;
+        border: 0;
+        min-width: 650px;
+    }
+
+    &__gradient {
+        @include size(100px, 40px, 4px);
+        background-color: #24b47e;
+        transform: skew(-23deg, 0);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        bottom: 16px;
+        left: -16px;
+    }
+
+    &__gradient-img {
+        @include obnull;
+        border: 0;
+        @include size(50px, auto, 0);
+        transform: skew(23deg, 0);
+    }
+
+    &__buttons {
+        margin-top: 50px;
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__switch {
+        @include obnull;
+        @include size(50px, 50px, 50px);
+        border: 0;
+        background-color: var(--bg-slider);
+        background-position: center;
+        background-repeat: no-repeat;
+        cursor: pointer;
+
+        &:hover {
+            opacity: .6;
+        }
+    }
+
+    &__switch_back {
+        margin-right: 20px;
+        background-image: var(--bgi-slider-back);
+    }
+
+    &__switch_next {
+        background-image: var(--bgi-slider-next);
+    }
+}

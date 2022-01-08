@@ -1,0 +1,44 @@
+.caption {
+    @include obnull;
+    max-width: 1440px;
+    @include size(100%, 0, 0);
+    box-sizing: border-box;
+    margin: 60px auto;
+    display: grid;
+    grid-template-columns: 650px 470px;
+    grid-template-rows: auto auto;
+    column-gap: 80px;
+    z-index: 1;
+
+    &__image {
+        @include obnull;
+        @include size(100%, auto, 0);
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+
+    &__title {
+        @include obnull;
+        @include fonts(34px, 600, 44px, -0.5px, var(--color-heading));
+    }
+
+    &__author {
+        @include obnull;
+        @include size(100%, 100%, 0);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-end;
+    }
+
+    &__author-name {
+        @include obnull;
+        @include fonts(20px, 500, 32px, 0, var(--color-heading));
+        margin-bottom: 6px;
+    }
+
+    &__author-description {
+        @include obnull;
+        @include fonts(16px, 400, 28px, 0, var(--color-text))
+    }
+}

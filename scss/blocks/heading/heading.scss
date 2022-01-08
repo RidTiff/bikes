@@ -1,0 +1,5 @@
+.heading {
+    @include obnull;
+    margin: 60px 0 50px;
+    @include fonts(55px, 700, 60px, -0.5px, var(--color-heading));
+}
