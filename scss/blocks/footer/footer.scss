@@ -1,6 +1,7 @@
 .footer {
     background-color: var(--bg-footer);
     @include size(100%, 0, 0);
+    position: relative;
 
     &__content {
         margin: 80px auto 60px;
@@ -11,6 +12,12 @@
         @include size(100%, 0, 0);
         padding: 0 120px;
         box-sizing: border-box;
+
+        @media screen and (max-width: 767px) {
+            margin: 60px auto 25px;
+            padding: 0;
+            max-width: 284px;
+        }
     }
 
     &__text {
@@ -24,6 +31,11 @@
         @include fonts(24px, 600, 32px, 0, var(--color-heading));
         margin-bottom: 50px;
         width: 229px;
+
+        @media screen and (max-width: 767px) {
+            width: 100%;
+            margin-bottom: 40px;
+        }
     }
 
     &__form {
@@ -57,6 +69,10 @@
                 font-size: 0;
             }
         }
+
+        @media screen and (max-width: 767px) {
+            @include size(284px, 50px, 4px);
+        }
     }
 
     &__submit {
@@ -79,4 +95,19 @@
         @include fonts(14px, 400, 20px, 0, var(--color-caption));
     }
 
+    &__logo {
+        @include size(38px, 38px, 0);
+        position: absolute;
+        right: 16px;
+        bottom: 16px;
+        background-image: url(../images/logo.svg);
+        background-position: center;
+        background-color: inherit;
+        background-repeat: no-repeat;
+        display: none;
+
+        @media screen and (max-width: 767px) {
+            display: block;
+        }
+    }
 }

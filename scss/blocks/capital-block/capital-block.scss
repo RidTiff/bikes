@@ -1,5 +1,6 @@
 .capital-block {
     @include size(100%, 0, 0);
+    @include obnull;
     background-image: url('../images/capital-blockBG.png');
     background-size: 610px 836px;
     background-position: right bottom;
@@ -9,10 +10,24 @@
     margin: 74px 0 60px;
     align-self: flex-end;
 
+    @media screen and (max-width: 767px) {
+        width: 284px;
+        background-size: 254px 348px;
+        background-position: right 18px top 200px;
+        min-height: 706px;
+        margin: 74px auto 0;
+    }
+
     &__content {
         width: 460px;
         padding-top: 80px;
         box-sizing: border-box;
+        position: relative;
+
+        @media screen and (max-width: 767px) {
+            width: 100%;
+            padding-top: 40px;
+        }
     }
 
     &__title {
@@ -27,13 +42,14 @@
         @include obnull;
         border: 0;
         @include size(180px, 50px, 4px);
-        background-image: linear-gradient(to left, #24b47e 0 180px, #319E75 180px 180px);
+        background-color: #24b47e;
         @include fonts(14px, 600, 18px, 1px, var(--color-button));
         cursor: pointer;
 
         &:hover {
             animation: changeColor linear .5s forwards;
         }
+
         @keyframes changeColor {
             0% {
                 background-image: linear-gradient(to left, #24b47e 0 180px, #319E75 180px 180px);
@@ -54,13 +70,22 @@
                 background-image: linear-gradient(to left, #24b47e 0 0, #319E75 0 180px);
             }
         }
+
+        @media screen and (max-width: 767px) {
+            position: static;
+            @include size(284px, 46px, 0);
+        }
     }
 
     &__sign {
         margin: 167px 0 0;
         display: flex;
         flex-direction: row;
-        align-items: center
+        align-items: center;
+
+        @media screen and (max-width: 767px) {
+            display: none;
+        }
     }
 
     &__sign-text {
@@ -78,7 +103,13 @@
         @include size(440px, 430px, 0);
         position: absolute;
         top: 347px;
-        right: 370px;
+        right: -490px;
+
+        @media screen and (max-width: 767px) {
+            position: static;
+            @include size(234px, 229px, 0);
+            margin: 120px 0 77px;
+        }
     }
 
     &__card {
@@ -90,10 +121,18 @@
         display: flex;
         justify-content: center;
         align-items: center;
+
+        @media screen and (max-width: 767px) {
+            @include size(234px, 160px, 0);
+        }
     }
 
     &__bike {
         @include obnull;
         @include size(340px, 260px, 0);
+
+        @media screen and (max-width: 767px) {
+            @include size(180px, 140px, 0);
+        }
     }
 }

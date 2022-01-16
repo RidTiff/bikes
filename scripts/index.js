@@ -93,24 +93,57 @@ backButton.addEventListener('click', function() {
 
 // Темная тема
 
-const switchForm = document.querySelector('.switch');
-const switchInput = switchForm.querySelector('.switch__input');
-const switchLabel = switchForm.querySelector('.switch__label');
-const switchCheckbox = switchForm.querySelector('.switch__checkbox')
+
+const switchInput = document.querySelectorAll('.switch__input');
+
+const switchLabel = document.querySelectorAll('.switch__label');
+const footerSection = document.querySelector('.footer');
+const switchLabelFooter = footerSection.querySelector('.switch__label');
+const popupSection = document.querySelector('.popup');
+const switchLabelPopup = popupSection.querySelector('.switch__label');
 const page = document.querySelector('.page');
 
-switchInput.checked = false;
+switchInput.forEach((item) => {
+    item.checked = false;
+});
 
-switchCheckbox.addEventListener('click', function() {
-    if (switchInput.checked === true) {
-    page.classList.add('page_theme_light');
-    page.classList.remove('page_theme_dark');
-    } else {
+function changeTheme(num) {
+    if (switchInput[num].checked) {
         page.classList.remove('page_theme_light');
         page.classList.add('page_theme_dark');
+        switchInput.forEach((item) => {
+            item.checked = true;
+        });
+    } else {
+        page.classList.add('page_theme_light');
+        page.classList.remove('page_theme_dark');
+        switchInput.forEach((item) => {
+            item.checked = false;
+        });
     }
-})
+} 
 
+switchLabelFooter.addEventListener('click', function() {
+    changeTheme(0);
+});
+switchLabelPopup.addEventListener('click', function() {
+    changeTheme(1);
+});
+
+//Popup
+
+const menuButton = document.querySelector('.header__popup-activator');
+const navLinksPopup = popupSection.querySelectorAll('.nav__li');
+
+function OpenClosePopup() {
+    popupSection.classList.toggle('popup_opened');
+    menuButton.classList.toggle('header__popup-activator_active')
+}
+
+menuButton.addEventListener('click', OpenClosePopup);
+navLinksPopup.forEach( (item) => {
+    item.addEventListener('click', OpenClosePopup);
+})
 
 
 // Велосипеды
@@ -174,6 +207,7 @@ const bikesSection = document.querySelector('.bikes');
 const bikesLinkElements = bikesSection.querySelectorAll('.bikes__pavement');
 const bikesImageElements = bikesSection.querySelectorAll('.bikes__image');
 const bikesTextElements = bikesSection.querySelectorAll('.bikes__description');
+const bikesSelectElement = bikesSection.querySelector('.bikes__pavements-select');
 let bikesLinkElement = bikesSection.querySelector('.bikes__pavement_active');
 let nameObj;
 
@@ -195,8 +229,15 @@ function changeBikesImage(link) {
         bikesLinkElements.item(i).classList.remove('bikes__pavement_active');
     }
     link.classList.add('bikes__pavement_active');
-    console.log(link);
     renderBikesImage();
+}
+
+function changeActiveLink() {
+    for (let i = 0; bikesLinkElements.length > i; i++) {
+        if (bikesLinkElements[i].textContent === bikesSelectElement.value) {
+            changeBikesImage(bikesLinkElements[i]);
+        }
+    }
 }
 
 const bikeHighwayLinkElement = bikesSection.querySelector('#highway');
@@ -205,13 +246,32 @@ const bikeTtLinkElement = bikesSection.querySelector('#tt');
 
 bikeHighwayLinkElement.addEventListener('click', function() {
     changeBikesImage(bikeHighwayLinkElement);
+    bikesSelectElement.options[0].selected = true;
 });
 bikeGravelLinkElement.addEventListener('click', function() {
     changeBikesImage(bikeGravelLinkElement);
+    bikesSelectElement.options[1].selected = true;
 });
 bikeTtLinkElement.addEventListener('click', function() {
     changeBikesImage(bikeTtLinkElement);
+    bikesSelectElement.options[2].selected = true;
 });
+bikesSelectElement.addEventListener('change', changeActiveLink);
+
+
+//Смена байков на мобилке
+
+const bikesLabelElements = bikesSection.querySelectorAll('.bikes__label');
+const bikesCardElements = bikesSection.querySelectorAll('.bikes__card')
+
+bikesLabelElements.forEach((item) => {
+    item.addEventListener('click', function() {
+            bikesCardElements.forEach((item) => {
+                item.classList.remove('bikes__card_visible');
+            })
+            bikesCardElements[item.firstElementChild.id[0] - 1].classList.add('bikes__card_visible');
+        })
+})
 
 //e-mail 
 

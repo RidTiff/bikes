@@ -8,4 +8,29 @@
     left: 0;
     z-index: 3;
     background-color: var(--bg-base);
+    display: flex;
+    align-items: center;
+
+    @media screen and (max-width: 767px) {
+        padding-right: 18px;
+        justify-content: flex-end;
+    }
+
+    &__popup-activator {
+        background-image: url(../images/menu.png);
+        background-size: contain;
+        background-color: inherit;
+        @include obnull;
+        border: 0;
+        @include size(22px, 22px, 0);
+        display: none;
+
+        &_active {
+            background-image: url(../images/close.svg);
+        }
+
+        @media screen and (max-width: 767px) {
+            display: block;
+        }
+    }
 }

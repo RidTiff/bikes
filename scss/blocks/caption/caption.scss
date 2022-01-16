@@ -10,16 +10,32 @@
     column-gap: 80px;
     z-index: 1;
 
+    @media screen and (max-width: 767px) {
+        grid-template-columns: 284px;
+        grid-auto-rows: auto;
+        gap: 40px;
+        margin: 0 auto;
+        width: 284px;
+    }
+
     &__image {
         @include obnull;
         @include size(100%, auto, 0);
         grid-row-start: 1;
         grid-row-end: 3;
+
+        @media screen and (max-width: 767px) {
+            grid-row: 2/3;
+        }
     }
 
     &__title {
         @include obnull;
         @include fonts(34px, 600, 44px, -0.5px, var(--color-heading));
+
+        @media screen and (max-width: 767px) {
+            @include fonts(23px, 600, 29px, -0.5px, var(--color-heading));
+        }
     }
 
     &__author {
@@ -35,10 +51,19 @@
         @include obnull;
         @include fonts(20px, 500, 32px, 0, var(--color-heading));
         margin-bottom: 6px;
+
+        @media screen and (max-width: 767px) {
+            @include fonts(14px, 500, 22px, 0, var(--color-heading));
+            margin-bottom: 4px;
+        }
     }
 
     &__author-description {
         @include obnull;
-        @include fonts(16px, 400, 28px, 0, var(--color-text))
+        @include fonts(16px, 400, 28px, 0, var(--color-text));
+
+        @media screen and (max-width: 767px) {
+            @include fonts(10px, 400, 16px, 0, var(--color-text));
+        }
     }
 }
