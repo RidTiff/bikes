@@ -237,7 +237,6 @@
   height: 1px;
   background-color: #e3e3e3;
   margin: 80px auto 40px;
-  display: none;
 }
 .line_place_display-grid {
   grid-row: 1/2;
@@ -246,11 +245,6 @@
 }
 .line_place_pavement {
   grid-area: line;
-}
-@media screen and (max-width: 767px) {
-  .line {
-    display: block;
-  }
 }
 
 .capital-block {
