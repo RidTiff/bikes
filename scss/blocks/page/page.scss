@@ -1,0 +1,33 @@
+.page {
+    @include obnull;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--bg-base);
+
+    &_theme_light {
+        --color-heading: #151515;
+        --color-text: rgba(34, 34, 34, .7);
+        --color-caption: #cfcfcf;
+        --color-button: #fff;
+        --color-placeholder: rgba(34, 34, 34, .7);
+        --bg-base: #f4f4f4;
+        --bg-footer: #efefef;
+        --bg-slider: #ebebeb;
+        --bgi-slider-next: url(../images/next-light.svg);
+        --bgi-slider-back: url(../images/back-light.svg);
+    }
+
+    &_theme_dark {
+        --color-heading: #fff;
+        --color-text: rgba(229, 229, 229, .7);
+        --color-caption: #565656;
+        --color-button: #fff;
+        --color-placeholder: rgba(#fff, .7);
+        --bg-base: #333;
+        --bg-footer: #2f2f2f;
+        --bg-slider: #434343;
+        --bgi-slider-next: url(../images/next-dark.svg);
+        --bgi-slider-back: url(../images/back-dark.svg);
+    }
+}

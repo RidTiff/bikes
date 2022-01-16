@@ -1,0 +1,61 @@
+.switch {
+    @include obnull;
+    align-self: flex-end;
+
+    &__input {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+    }
+
+    &__checkbox {
+        @include obnull;
+        @include size(44px, 24px, 0);
+        display: block;
+        background-image: url(../images/switch-light.png);
+    }
+
+    &__input:checked{
+         + .switch__checkbox {
+            background-image: url(../images/switch-dark.png);
+        }
+    }
+
+    &__input:disabled {
+         + .switch__checkbox {
+            background-image: url(../images/switch-light.png);
+        }
+    }
+
+    &__label {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        @include size(140px, 40px, 0);
+        cursor: pointer;
+    }
+
+    &__sun {
+        background-image: url(../images/sun.svg);
+        @include size(28px, 28px, 0);
+        margin-right: 22px;
+    }
+
+    &__moon {
+        background-image: url(../images/moon.svg);
+        @include size(19.35px, 19.35px, 0);
+        margin-left: 22px;
+    }
+
+    &_place_popup {
+        align-self: center;
+    }
+
+    &_place_footer {
+        @media screen and (max-width: 767px) {
+            display: none;
+        }
+    }
+}

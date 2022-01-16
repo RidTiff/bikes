@@ -3,9 +3,184 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Научиться учиться</title>
+  <title>Велосипеды</title>
   <link rel="stylesheet" href="./page/index.css">
 </head>
-<body class="page">
+<body class="page page_theme_light">
+  <header class="header">
+    <nav class="nav nav_place_header">
+      <ul class="nav__ul">
+        <li class="nav__li">
+          <a href="#pavement" class="nav__item">Покрытия и градиенты</a>
+        </li>
+        <li class="nav__li">
+          <a href="#bikes" class="nav__item">Велосипеды</a>
+        </li>
+        <li class="nav__li">
+          <a href="#training" class="nav__item">Тренировки</a>
+        </li>
+      </ul>
+    </nav>
+    <button class="header__popup-activator"></button>
+  </header>
+  <main class="main">
+    <section class="capital-block">
+      <div class="capital-block__content">
+        <h1 class="heading capital-block__title">Шоссе, ТТ и Грэвел</h1>
+        <div class="capital-block__card-container">
+          <div class="capital-block__card">
+            <img src="./images/capital-card__image.png" alt="Cannondale Systemsix" class="capital-block__bike">
+          </div>
+        </div>
+        <p class="text capital-block__text">Триатлонные старты, горные 
+          серпантины или грейвел заезды по живописным маршрутам – 
+          нужно только определиться с выбором велосипеда и отправиться в путь.</p>
+        <button type="button" class="capital-block__button">Подробнее</button>
+        <div class="capital-block__sign">
+          <p class="capital-block__sign-text">Cannondale Systemsix</p>
+          <div class="capital-block__sign-line"></div>
+        </div>
+      </div>
+    </section>
+    <section class="caption">
+      <div class="line line_place_display-grid"></div>
+      <img src="./images/caption.png" alt="Велосипедист едет по дороге в зеленой межгорной долине" class="caption__image">
+      <h2 class="caption__title">«Катайся много или мало, долго или коротко, как хочешь - но катайся»</h2>
+      <div class="caption__author">
+        <h3 class="caption__author-name">Эдди Меркс</h3>
+        <p class="caption__author-description">Велогонщик</p>
+      </div>
+    </section>
+    <section class="pavement" id="pavement">
+      <div class="line line_place_display-grid line_place_pavement"></div>
+      <h2 class="heading pavement__heading">Шоссе</h2>
+      <p class="text pavement__text">На шоссейном велосипеде можно 
+          ездить по асфальту на разных градиентах: будь то горы 
+          или равнины. Гонки проходят в командном пелотоне, но 
+          тренироваться можно и самостоятельно.</p>
+      <div class="pavement__slider">
+        <img src="./images/highway.png" alt="" class="pavement__image">
+        <img src="./images/gravel.png" alt="" class="pavement__image">
+        <img src="./images/tt.png" alt="" class="pavement__image">
+        <div class="pavement__gradient">
+          <img class="pavement__gradient-img" src="./images/highway.svg" alt="">
+        </div>
+      </div>
+      <div class="pavement__buttons">
+        <button class="pavement__switch pavement__switch_back" type="button" name="back"></button>
+        <button class="pavement__switch pavement__switch_next" type="button" name="next"></button>
+      </div>
+    </section>
+    <section class="bikes" id="bikes">
+      <div class="line"></div>
+      <div class="bikes__text">
+        <h2 class="heading bikes__title">Велосипеды</h2>
+        <div class="bikes__pavements">
+          <button id="highway" class="bikes__pavement bikes__pavement_active">Шоссе</button>
+          <button id="gravel" class="bikes__pavement">Грэвел</button>
+          <button id="tt" class="bikes__pavement">ТТ</button>
+        </div>
+        <form action="#" class="bikes__pavements-form">
+          <select name="select" class="bikes__pavements-select">
+            <option selected value="Шоссе" class="bikes__pavement-option">Шоссе</option>
+            <option value="Грэвел" class="bikes__pavement-option">Грэвел</option>
+            <option value="ТТ" class="bikes__pavement-option">ТТ</option>
+          </select>
+        </form>
+      </div>
+      <div class="bikes__cards">
+        <a href="" class="bikes__card bikes__card_visible" id="bike-1">
+          <div class="bikes__card-bg">
+            <img src="" alt="" class="bikes__image">
+          </div>
+          <p class="bikes__description"></p>
+        </a>
+        <a href="" class="bikes__card" id="bike-2">
+          <div class="bikes__card-bg">
+            <img src="" alt="" class="bikes__image">
+          </div>
+          <p class="bikes__description"></p>
+        </a>
+        <a href="" class="bikes__card" id="bike-3">
+          <div class="bikes__card-bg">
+            <img src="" alt="" class="bikes__image">
+          </div>
+          <p class="bikes__description"></p>
+        </a>
+      </div>
+      <form action="#" class="bikes__slider">
+        <label class="bikes__label" for="1-bike">
+          <input type="radio" name="bike" class="bikes__input" id="1-bike" checked>
+          <span class="bikes__span"></span>
+        </label>
+        <label class="bikes__label" for="2-bike">
+          <input type="radio" name="bike" class="bikes__input" id="2-bike">
+          <span class="bikes__span"></span>
+        </label>
+        <label class="bikes__label" for="3-bike">
+          <input type="radio" name="bike" class="bikes__input" id="3-bike">
+          <span class="bikes__span"></span>
+        </label>
+      </form>
+    </section>
+    <section class="training" id="training">
+      <div class="line line_place_display-grid"></div>
+      <h2 class="training__title heading">Тренировки</h2>
+      <img src="./images/training.png" alt="Дорога поворачивает меж сосен" class="training__image">
+      <p class="training__description text">Чтобы найти маршрут для 
+        тренировки можно воспользоваться сервисом Komoot, а записать 
+        эти тренировки поможет приложение Strava, а также это приложение 
+        позволит построить тренировочный план.</p>
+      <div class="training__links">
+        <a href="https://www.strava.com" class="training__link">Strava</a>
+        <a href="https://www.komoot.com" class="training__link">Komoot</a>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer__content">
+      <div class="footer__text">
+        <form class="footer__form" onsubmit="return false;">
+          <h2 class="footer__title">Подпишитесь на рассылку —</h2>
+          <input type="email" class="footer__e-mail" placeholder="Ваш e-mail">
+          <button class="footer__submit footer__submit_hidden">ok!</button>
+        </form>
+        <p class="footer__caption">&copy; Road Club 2021</p>
+      </div>
+      <form class="switch switch_place_footer">
+        <label class="switch__label" for="switch-footer">
+          <div class="switch__sun"></div>
+          <input type="checkbox" class="switch__input" id="switch-footer">
+          <span class="switch__checkbox"></span>
+          <div class="switch__moon"></div>
+        </label>
+      </form>
+    </div>
+    <div class="footer__logo"></div>
+  </footer>
+  <section class="popup">
+    <nav class="nav nav_place_popup">
+      <ul class="nav__ul">
+        <li class="nav__li">
+          <a href="#pavement" class="nav__item">Покрытия и градиенты</a>
+        </li>
+        <li class="nav__li">
+          <a href="#bikes" class="nav__item">Велосипеды</a>
+        </li>
+        <li class="nav__li">
+          <a href="#training" class="nav__item">Тренировки</a>
+        </li>
+      </ul>
+    </nav>
+    <form class="switch switch_place_popup">
+      <label class="switch__label" for="switch-popup">
+        <div class="switch__sun"></div>
+        <input type="checkbox" class="switch__input" id="switch-popup">
+        <span class="switch__checkbox"></span>
+        <div class="switch__moon"></div>
+      </label>
+    </form>
+  </section>
+  <script src="./scripts/index.js"></script>
 </body>
 </html>
