@@ -38,12 +38,14 @@
     }
 
     &__sun {
+        display: block;
         background-image: url(../images/sun.svg);
         @include size(28px, 28px, 0);
         margin-right: 22px;
     }
 
     &__moon {
+        display: block;
         background-image: url(../images/moon.svg);
         @include size(19.35px, 19.35px, 0);
         margin-left: 22px;

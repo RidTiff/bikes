@@ -1201,12 +1201,14 @@
   cursor: pointer;
 }
 .switch__sun {
+  display: block;
   background-image: url(../images/sun.svg);
   width: 28px;
   height: 28px;
   margin-right: 22px;
 }
 .switch__moon {
+  display: block;
   background-image: url(../images/moon.svg);
   width: 19.35px;
   height: 19.35px;
