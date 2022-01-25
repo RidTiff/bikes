@@ -565,7 +565,7 @@
     padding: 0;
     grid-template-areas: "line line" "heading buttons" "slider slider" "text text";
     gap: 40px;
-    max-width: 284px;
+    width: 284px;
     margin: 0 auto;
   }
 }
@@ -663,8 +663,8 @@
 @media screen and (max-width: 767px) {
   .pavement__buttons {
     grid-area: buttons;
-    margin: 0;
-    grid-column: -1;
+    margin: auto;
+    margin-right: 0;
     width: 58px;
     height: 24px;
   }
