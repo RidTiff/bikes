@@ -1,0 +1,9 @@
+.text {
+    @include obnull;
+    margin: 0;
+    @include fonts(18px, 400, 28px, 0, var(--color-text));
+
+    @media screen and (max-width: 767px) {
+        @include fonts(12px, 400, 18px, 0, var(--color-text));
+    }
+}

@@ -1,0 +1,59 @@
+.training {
+    display: grid;
+    grid-template-columns: 460px 580px;
+    grid-template-rows: minmax(60px, max-content) repeat(2, auto);
+    column-gap: 160px;
+    row-gap: 50px;
+    margin: 150px 0 120px;
+
+    @media screen and (max-width: 767px) {
+        grid-template-columns: 284px;
+        grid-template-rows: repeat(4, auto);
+        gap: 40px;
+        margin: 0 auto 60px;
+        max-width: 284px;
+    }
+
+    &__title {
+        margin: 0; 
+        align-self: start;
+        
+    }
+
+    &__description {
+        grid-column: 1;
+        align-self: start;
+    }
+
+    &__links {
+        display: flex;
+        flex-direction: row;
+        align-self: end;
+    }
+
+    &__link {
+        margin-right: 30px;
+        @include fonts(18px, 600, 28px, 0, var(--color-heading));
+        text-decoration: none;
+
+        &:last-of-type {
+            margin: 0;
+        }
+
+        @media screen and (max-width: 767px) {
+            @include fonts(14px, 600, 20px, 0, var(--color-heading));
+        }
+    }
+
+    &__image {
+        @include size(580px, 460px, 0);
+        grid-column: 2/3;
+        grid-row: 1/4;
+
+        @media screen and (max-width: 767px) {
+            grid-column: 1/2;
+            grid-row: 3/4;
+            @include size(284px, 225px, 0);
+        }
+    }
+}
